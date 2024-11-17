@@ -1,4 +1,5 @@
 # **CoRa**
+![logo](https://github.com/user-attachments/assets/c61d5135-73a5-47bd-b228-f6dc91942404)
 
 CoRa é um projeto open source criado para facilitar a rotina de psicólogos, oferecendo uma alternativa simples e acessível para o gerenciamento de consultas e dados de pacientes.
 
