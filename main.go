@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"io/ioutil"
+	"cora/models"
 
 	_ "modernc.org/sqlite" // Driver SQLite
 )
@@ -56,4 +57,20 @@ func main() {
 	defer db.Close()
 
 	fmt.Println("Banco de dados inicializado com sucesso!")
+
+	// Testando inserção de paciente
+	fmt.Println("Inserindo paciente de teste...")
+	paciente := models.Paciente{
+		Nome:     "TesteN",
+		CPF:      "1231231231",
+		Email:    "teste@teste.com",
+		Telefone: "11944444444",
+	}
+
+	err = models.InserirPaciente(db, paciente)
+	if err != nil {
+		fmt.Printf("Erro ao inserir paciente: %v", err)
+		return
+	}
+	fmt.Println("Paciente inserido com sucesso!")
 }
